@@ -59,6 +59,7 @@ function App() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({
       behavior: "smooth",
+      block: "nearest",
     });
   }, [chats, temporaryMessages, isTyping]);
 

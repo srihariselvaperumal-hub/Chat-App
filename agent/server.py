@@ -63,7 +63,7 @@ client = genai.Client(
 
 runner = InMemoryRunner(
     agent=root_agent,
-    app_name="weather_agent",
+    app_name="sri_assistant",
 )
 
 
