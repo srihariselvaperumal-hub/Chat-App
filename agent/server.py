@@ -152,6 +152,7 @@ async def run_agent(message: str) -> str:
 # ============================================================
 
 @app.post("/chat")
+@app.post("//chat", include_in_schema=False)
 async def chat(request: ChatRequest):
     response = await run_agent(
         request.message

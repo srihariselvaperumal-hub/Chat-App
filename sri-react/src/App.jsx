@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || import.meta.env.VITE_BACKEND_URL || "http://127.0.0.1:8000";
+const rawApiUrl = import.meta.env.VITE_API_URL || import.meta.env.VITE_BACKEND_URL || "http://127.0.0.1:8000";
+const API_BASE_URL = rawApiUrl.replace(/\/+$/, "");
 
 function App() {
   // Normal chat conversations
